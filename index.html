@@ -1,76 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>CatPhotoApp</title>
-		 <meta markdown="value" charset="UTF-8">
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Menu</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
   <body>
-    <main>
-      <h1>猫咪照片应用</h1>
-      <section> <!--部分-->
-        <h2>猫咪 照片</h2>
-        <!-- TODO: Add link to cat photos -->
-        <p>点击这里查看更多 <a target="_blank" href="https://freecatphotoapp.com"> 猫咪照片</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-      </section>
-      <section>
-        <h2>猫列表</h2>
-        <h3>猫喜欢的东西:</h3>
-        <ul><!--无序列表-->
-          <li>猫咬</li>
-           <li>激光笔</li>
-            <li>千层面</li>	
-        </ul>
-		<figure> <!--图片与标题关联父属性，figcaption图片标题-->
-			<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
-			<figcaption>Cats <em>love</em> lasagna.</figcaption>
-		</figure>
-		<h3>Top 3 things cats hate:</h3>
-			<ol>   <!--有序列表，用法与无序列表大致子标签<li></li>-->
-		        <li>flea treatment</li>
-		        <li>thunder</li>
-		        <li>other cats</li>
-		    </ol>
-			<figure>
-				<!--img标签中的alt属性是为了防止网络无法加载图片是能及时显示出相关的内容，提高图片的可读性-->
-				<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
-				<!--添加图片的标题figcaption标签-->
-				<!--<strong>标签元素是指明某些文本比较重要用来着重-->
-				<figcaption>Cats <strong>hate</strong> other cats.</figcaption>
-			</figure>
-			
-      </section>
-	  <section>
-		  <h2>Cat Form</h2>
-		  <!--action属性的作用是指明发送的位置-->
-		  <form action="https://freecatphotoapp.com/submit-cat-photo">
-			  <!--input元素与img元素一样是自闭合元素，不需要结尾，允许你通过多种方式从 Web 表单中收集数据
-				type 限制输入的数据类型 例如text password.. name元素是为了action获取数据时给与action一个地址
-				精准的获取目标数据
-				label 元素用于帮助将 input 元素的文本与 input 元素本身关联起来->将多个元素组合
-			  -->
-			  <fieldset>
-				  <legend>Is your cat an indoor or outdoor cat?</legend>
-			  <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked="">Indoor</label>
-			  <label><input id="outdoor" type="radio"/ name="indoor-outdoor" value="outdoor">Outdoor</label>
-			  </fieldset>
-			  <fieldset>
-				  <legend>What's your cat's personality?</legend>
-				  <!--<input type="checkbox" id="loving"> Loving-->
-				  <input type="checkbox" id="loving" name="personality" value="loving" checked=""> <label for="loving">Loving</label>
-				   <input id="lazy" name="personality" type="checkbox" value="lazy"><label for="lazy"> Lazy</lable>
-				   <input id="energetic" name="personality" type="checkbox" value="energetic"> <label for="energetic"> Energetic</label>
-			  </fieldset>
-			  
-			  <input type="text" name="catphotourl" placeholder="cat photo URL" required>
-			  <button type="submit">SUbmit</button>
-			  <!--button标签元素无事件响应时默认将信息发送给action 
-			  单击没有任何属性的表单按钮的默认行为会将表单提交到表单的 action 属性中指定的位置。-->
-		  </form>
-	  </section>
-    </main>
-	<footer>
-		<p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
-	</footer>
+    <div class="menu">
+      <main>
+        <h1>CAMPER CAFE</h1>
+        <p class="established">Est. 2020</p>
+		<hr>
+        <section>
+          <h2 >Coffee</h2>
+		  <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg"/ alt="coffee icon">
+          <article class="item">
+
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+           
+          </article>
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          </article>
+        </section>
+		<section>
+			<h2>Desserts</h2>
+			<img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon">
+			 <article class="item">
+			     <p class="dessert">Donut</p><p class="price">1.50</p>
+				 </article>
+				  </article>
+			   <article class="item">
+				 <p class="dessert">cherry pie</p><p class="price">2.75</p>
+			   </article>
+			   <article class="item">
+				 <p class="dessert">cheesecake</p><p class="price">3.00</p>
+			   </article>
+			   <article class="item">
+				 <p class="dessert">cinnamon roll</p><p class="price">2.50</p>
+			   </article>
+		</section>
+      </main>
+	  <hr class="bottom-line">
+	  <footer>
+		  <p class="address"><a href="https://www.freecodecamp.org">Visit our website</a></p>
+		  <p class="address">123 Free Code Camp Drive</p>
+	  </footer>
+	  
+    </div>
   </body>
 </html>
